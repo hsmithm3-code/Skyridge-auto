@@ -14,18 +14,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&family=Arimo:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #141414;
-      --ink-2: #1b1a18;
-      --panel: #181716;
-      --line: #2c2a27;
-      --text: #ece7de;
-      --muted: #b3ada3;
-      --dim: #8f897f;
-      --gold: #c9a35c;
-      --gold-deep: #9a7a3e;
-      --cream: #efe9dd;
-      --cream-line: #ddd5c6;
-      --cream-text: #4a4640;
+      --ink: #1d140f;
+      --ink-2: #2a1d15;
+      --panel: #241a13;
+      --line: #3d2c21;
+      --text: #f2e9d9;
+      --muted: #c7b9a4;
+      --dim: #a08e78;
+      --gold: #e6d5b4;
+      --gold-deep: #7a5a3f;
+      --cream: #efe4d0;
+      --cream-line: #dccbb0;
+      --cream-text: #5a4636;
       --serif: "Tinos", "Times New Roman", Times, serif;
       --sans: "Arimo", "Helvetica Neue", Arial, sans-serif;
       --wrap: 1100px;
@@ -57,7 +57,7 @@
     /* Header */
     header {
       position: sticky; top: 0; z-index: 10;
-      background: rgba(20, 20, 20, 0.94);
+      background: rgba(29, 20, 15, 0.94);
       backdrop-filter: blur(6px);
       border-bottom: 1px solid var(--line);
     }
@@ -93,7 +93,7 @@
       display: flex; align-items: center;
       background-color: #2a2824;
       background-image:
-        linear-gradient(90deg, rgba(14,14,14,0.92) 0%, rgba(14,14,14,0.8) 38%, rgba(14,14,14,0.4) 70%, rgba(14,14,14,0.3) 100%),
+        linear-gradient(90deg, rgba(24,16,11,0.82) 0%, rgba(24,16,11,0.55) 38%, rgba(24,16,11,0.12) 68%, rgba(24,16,11,0) 100%),
         var(--hero-photo);
       background-size: cover;
       background-position: 70% 50%;
@@ -107,7 +107,7 @@
       margin: 18px 0 26px;
     }
     .hero h1 em { font-style: italic; color: var(--gold); }
-    .hero p { color: #d8d2c7; font-size: 16px; margin-bottom: 34px; max-width: 470px; }
+    .hero p { color: #e0d3bd; font-size: 16px; margin-bottom: 34px; max-width: 470px; }
     .btns { display: flex; flex-wrap: wrap; gap: 14px; }
     .btn {
       display: inline-block;
@@ -115,9 +115,9 @@
       text-decoration: none; padding: 16px 26px;
       transition: background .2s, color .2s, border-color .2s;
     }
-    .btn-gold { background: var(--gold); color: #1a1712; border: 1px solid var(--gold); }
-    .btn-gold:hover { background: #d8b673; }
-    .btn-ghost { color: var(--text); border: 1px solid rgba(236,231,222,0.55); background: rgba(14,14,14,0.35); }
+    .btn-gold { background: var(--gold); color: #1d140f; border: 1px solid var(--gold); }
+    .btn-gold:hover { background: #f3e6cc; }
+    .btn-ghost { color: var(--text); border: 1px solid rgba(236,231,222,0.55); background: rgba(24,16,11,0.35); }
     .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
 
     /* Sections */
@@ -127,7 +127,7 @@
       line-height: 1.2;
       margin: 22px 0 14px;
     }
-    .lede { color: #cfc9be; max-width: 560px; }
+    .lede { color: #d6c8b2; max-width: 560px; }
     .grid-2 {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 56px 72px; margin-top: 64px;
@@ -150,7 +150,7 @@
     .philosophy blockquote em { font-style: italic; }
     .philosophy blockquote strong { color: var(--gold); font-weight: 700; }
     .grid-3 {
-      display: grid; grid-template-columns: repeat(3, 1fr);
+      display: grid; grid-template-columns: repeat(2, 1fr);
       gap: 40px; margin-top: 64px;
     }
     .principle .num {
@@ -161,6 +161,7 @@
     .principle p { color: var(--muted); font-size: 14.5px; }
 
     /* About */
+    section.block#about { background: var(--ink-2); }
     .about-grid > * { max-width: 680px; }
     #how .grid-3 { margin-top: 36px; gap: 40px 56px; }
     .about-lead {
@@ -168,7 +169,7 @@
       font-size: 22px; line-height: 1.45;
       margin: 20px 0 22px;
     }
-    .about-grid p.body { color: #cfc9be; margin-bottom: 18px; font-size: 15.5px; }
+    .about-grid p.body { color: #d6c8b2; margin-bottom: 18px; font-size: 15.5px; }
     .facts {
       border: 1px solid var(--line);
       background: var(--panel);
@@ -190,22 +191,23 @@
     .inquiries {
       background: var(--cream);
       color: var(--ink);
-      padding: 64px 0;
+      padding: 56px 0;
     }
     .inquiries .eyebrow { color: var(--gold-deep); }
-    .inquiries h2 { font-size: clamp(30px, 3.6vw, 40px); margin: 22px 0 22px; }
+    .inquiries h2 { font-size: clamp(30px, 3.6vw, 40px); margin: 18px 0 12px; }
     .inquiries .lede { color: var(--cream-text); max-width: 500px; }
     .contacts {
       display: grid; grid-template-columns: repeat(2, 1fr);
       border: 1px solid var(--cream-line);
-      margin-top: 52px;
+      margin-top: 28px;
+      max-width: 640px;
     }
     .contact {
-      padding: 30px 26px;
+      padding: 20px 22px;
       border-right: 1px solid var(--cream-line);
     }
     .contact:last-child { border-right: 0; }
-    .contact .eyebrow { margin-bottom: 14px; }
+    .contact .eyebrow { margin-bottom: 8px; }
     .contact a {
       font-family: var(--serif);
       font-size: 19px;
@@ -236,7 +238,7 @@
       .hero {
         min-height: 0;
         background-image:
-          linear-gradient(180deg, rgba(14,14,14,0.74) 0%, rgba(14,14,14,0.9) 100%),
+          linear-gradient(180deg, rgba(24,16,11,0.5) 0%, rgba(24,16,11,0.78) 100%),
           var(--hero-photo);
         background-position: 62% 50%;
       }
@@ -264,12 +266,11 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-inner">
-        <div class="eyebrow">Private car sourcing and advisory</div>
-        <h1>Exceptional cars, <em>expertly sourced.</em></h1>
-        <p>Skyridge Auto advises collectors and enthusiasts in Litchfield County and beyond.</p>
+        <div class="eyebrow">Private automotive advisory</div>
+        <h1>Exceptional cars, <em>expertly handled.</em></h1>
+        <p>Skyridge Auto advises and cares for the cars of collectors and enthusiasts in Litchfield County and beyond. By appointment.</p>
         <div class="btns">
-          <a href="#inquiries" class="btn btn-gold">Start a search</a>
-          <a href="#how" class="btn btn-ghost">Selling a car</a>
+          <a href="#inquiries" class="btn btn-gold">Begin a conversation</a>
         </div>
       </div>
     </div>
@@ -279,6 +280,10 @@
     <div class="wrap">
       <div class="eyebrow">Services</div>
       <div class="grid-3">
+        <div class="feature">
+          <h3>Collection care</h3>
+          <p>We winterize and prepare your cars for storage in your own garage, maintain them while they sit, and coordinate service, tires and detailing with the shops we trust.</p>
+        </div>
         <div class="feature">
           <h3>Buying</h3>
           <p>Tell us what you're looking for. We source the car, coordinate its inspection through the mechanics and shops we've trusted for years, and arrange delivery.</p>
@@ -299,7 +304,7 @@
     <div class="wrap about-grid">
       <div class="eyebrow">About</div>
       <p class="about-lead">Skyridge is led by Hamilton Smith, a lifelong motorsport and car enthusiast.</p>
-      <p class="body">Hamilton has raced in the Skip Barber National and Eastern Region series and has been sim racing for more than twenty years. He knows what separates a good car from a great one.</p>
+      <p class="body">Hamilton has raced in the Skip Barber National and Eastern Region series and has been sim racing for more than twenty years.</p>
     </div>
   </section>
 
